@@ -39,18 +39,26 @@ main .ability{
 }
 footer {
   width : 100%;
-  height : 400px;
   display: flex;
 }
-footer .contact{
+footer .contact-div{
   width : 50%;
   height: 400px;
   background-color : peachpuff;
 }
-footer .comment{
+footer .contact{
+  width : 50%;
+  padding :0 20px;
+  margin-top : 20px;
+}
+.comment-div{
   width : 50%;
   height: 400px;
   background-color : lightblue;
+}
+footer .comment{
+  padding :0 20px;
+  margin-top : 20px;
   overflow-y : scroll; 
 }
 
@@ -66,15 +74,11 @@ footer .comment{
   }
   footer {
     flex-direction: column;
-    height: 100vh;
   }
-  footer .contact{
+  footer .contact-div{
     width : 100%;
-    height: 50vh;
   }
-  footer .comment{
+  footer .comment-div{
     width : 100%;
-    height: 50vh;
-
   }
 }
