@@ -50,7 +50,8 @@ footer .contact{
 footer .comment{
   width : 50%;
   height: 400px;
-  background-color : lightblue; 
+  background-color : lightblue;
+  overflow-y : scroll; 
 }
 
 @media only screen 
