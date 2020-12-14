@@ -1,7 +1,7 @@
 'use strict';
 
 let darkmode = document.querySelector(".darkmode");
-let intro = document.querySelector(".intro")
+let mainCon = document.querySelector(".main-contents")
 let on = document.querySelector(".fa-toggle-on");
 let off = document.querySelector(".fa-toggle-off");
 let body = document.querySelector("body")
@@ -11,7 +11,7 @@ function toggleModal() {
   on.classList.toggle("toggleOff");
   off.classList.toggle("toggleOn");
   main.classList.toggle("darkimg");
-  intro.classList.toggle("backgroundwhite");
+  mainCon.classList.toggle("backgroundwhite");
 }
 darkmode.addEventListener("click", toggleModal);
 

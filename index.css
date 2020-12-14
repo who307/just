@@ -6,6 +6,7 @@
   border-radius: 20px;
 }
 body {
+  height: 100%;
   color: rgb(34, 34, 34);
   font-family: 'Mogra', cursive;
 }
@@ -22,6 +23,7 @@ body {
   color : rgb(255, 255, 255);
   cursor: pointer;
   z-index: 99;
+  color :rgba(73, 191, 255, 0.8)
 }
 
 header{
@@ -81,7 +83,7 @@ main .main-div{
   justify-content: space-around;
   align-items: center;
 }
-.intro{
+.main-contents{
   position: absolute;
   top: 80px;
   left: 100px;
@@ -143,7 +145,7 @@ main .main-div{
   color : black;
 }
 
-.text-div{
+.main-text{
   position: absolute;
   left : 30%;
   top : -100%;
@@ -161,7 +163,7 @@ main .main-div{
   0% {opacity : 0;}
   100% {position: absolute;  left: 8%; opacity: 1;}
 }
-.intro h2 {
+.main-contents h2 {
   position: absolute;
   left: -100%;
   top : 120px;
@@ -172,54 +174,77 @@ main .main-div{
   z-index: -1;
 
 }
-.intro strong{
+.main-contents strong{
   font-weight: bold;
-
 }
-.text-div h3{
+.main-text h3{
   font-size : 80px;
   font-weight: bold;
   padding-bottom: 100px;  
 }
-.text-div span{
+.main-text span{
   font-family: 'Noto Sans KR';
   font-size : 20px;  
 }
 
-.contents1{
-  width : 100%;
-  display: flex;
+/* 인트로 시작 */
+.intro-contents{
+  width: 100%;
+  height: 100vh;
 }
-.contents1-div{
+.intro-div{
   width : 100%;
+  display : flex;
+}
+.intro-title{
+  width: 100%;
+  height : 150px;
+  text-align: center;
+  line-height: 180px;
+  font-size: 50px;
+}
+.contents-div{
+  width : 100%;
+  height: 100%;
   padding :20px;
 }
-.contents1-div .image{
+.contents-div .image{
   width : 100%;
-  height : 50vh;
+  height : 80vh;
   min-height: 300px;
   background-color : orange;
-  
 }
-.contents1 .about{
+.contents-div .about{
   width : 100%;
-  height : 50vh;
+  height : 80vh;
   min-height: 300px;
   background-color :green;
 }
-.contents1 .ability{
+.contents-div .ability{
   width : 100%;
-  height : 50vh;
+  height : 80vh;
   min-height: 300px;
   background-color :rgb(97, 121, 255);
 }
-.contents2{
+
+/* 포트폴리오 시작 */
+.portfolio-contents{
+  height: 100vh;
+}
+.portfolio-div{
   display: flex;
   width : 100%;
-  height : 65vh;
+  height: calc(100% - 150px);
   min-height: 450px;
 }
-.contents2 .portfolio1{
+.portfolio-title{
+  width: 100%;
+  height : 150px;
+  text-align: center;
+  line-height: 170px;
+  font-size: 50px;
+}
+.portfolio-div .portfolio1{
   width : 100%;
   padding : 20px;
   display : flex;
@@ -234,7 +259,7 @@ main .main-div{
   height: 100%;
   background-color : rgb(58, 199, 255);
 }
-.contents2 .portfolio2{
+.portfolio-div .portfolio2{
   width : 100%;
   padding : 20px;
   display : flex;
@@ -249,16 +274,28 @@ main .main-div{
   height: 100%;
   background-color : rgb(250, 248, 125);
 }
+/* 푸터 시작 */
 footer {
   width : 100%;
+  height: 100vh;
+}
+.contactUs-contents{
+  height: calc(100% - 170px);
   display: flex;
 }
-footer .contact-div{
+.contactUs-title{
+  width: 100%;
+  height : 150px;
+  text-align: center;
+  line-height: 170px;
+  font-size: 50px;
+}
+footer .contactUs-div{
   width : 50%;
-  height: 400px;
+  height: 100%;
   padding : 20px 20px 0 20px;
 }
-footer .contact{
+footer .contactUs{
   width : 100%;
   height: 100%;
   background-color : peachpuff;
@@ -287,7 +324,7 @@ footer .con3{
 }
 footer .comment-div{
   width : 50%;
-  height: 400px;
+  height: 100%;
   padding : 20px 20px 0 20px;
 }
 footer .comment{
@@ -296,76 +333,124 @@ footer .comment{
   overflow-y : scroll; 
   background-color : lightblue;
 }
+
+/* 미디어쿼리 시작 */
 @media only screen 
     and (max-width : 1500px)
 {
-  .intro{
+  .main-contents{
     width: 80%;
     left: 100px;
   }
 }
-
+@media only screen 
+    and (max-width : 1300px)
+{
+  .contents-div{
+    width : 80%;
+    padding :20px;
+  }
+  .intro-contents{
+    width: 100%;
+    height: 100%;
+  }
+  .intro-div {
+    flex-direction: column;
+    align-items: center;
+  }
+  .portfolio1 .port1{
+    width: 100%;
+    height: 100%;
+    background-color : red;
+  }
+  .portfolio1 .port2{
+    width: 100%;
+    height: 100%;
+    background-color : rgb(58, 199, 255);
+  }
+  .portfolio2 .port3{
+    width: 100%;
+    height: 100%;
+    background-color : rgb(174, 0, 255);
+  }
+  .portfolio2 .port4{
+    width: 100%;
+    height: 100%;
+    background-color : rgb(250, 248, 125);
+  }
+  
+}
 @media only screen 
     and (max-width : 1000px)
 {
-
-  .intro{
+  .main-contents{
     position: absolute;
     top: 80px;
     left: 50px;
     width: 80%;
     transition: all 0.5s;
 }
-  .text-div h3{
+  .main-text h3{
     font-size : 9vw;
     font-weight: bold;
     padding-bottom: 100px;
   }
-  .text-div span{
+  .main-text span{
     font-size : 16px;
     line-height: 21px;
   }
-  .contents1 {
+  /* 인트로 시작 */
+  .intro-contents{
+    width: 100%;
+    height: 100%;
+  }
+  
+  .contents-div{
+    width : 90%;
+  }
+  /* 포트폴리오 시작 */
+  .portfolio-div{
+    min-height: 450px;
+    display : flex;
     flex-direction: column;
     align-items: center;
   }
-  .contents1-div{
+  .portfolio-div .portfolio1{
     width : 90%;
-  }
-  .contents2{
-    min-height: 450px;
-  }
-  .contents2 .portfolio1{
-    width : 100%;
-    padding : 20px 10px 20px 20px;
+    height: 100%;
+    padding : 10px 0px 10px 0px;
     display : flex;
     flex-direction: column;
   }
   .portfolio1 .port1, .portfolio1 .port2{
     width: 100%;
+    height: 100%;
   }
-  .contents2 .portfolio2{
-    width : 100%;
-    padding : 20px 20px 20px 10px;
+  .portfolio-div .portfolio2{
+    width : 90%;
+    height: 100%;
+    padding : 10px 0px 10px 0px;
     display : flex;
     flex-direction: column;
   }
   .portfolio2 .port3, .portfolio2 .port4{
     width: 100%;
+    height: 100%;
+
   }
-  footer {
+  /* 푸터 시작 */
+  .contactUs-contents{
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
-  footer .contact-div{
+  footer .contactUs-div{
     width : 90%;
-    height: 400px;
-    
   }
   footer .comment-div{
     width : 90%;
-    padding : 20px 20px 0 20px;   
-
+    height: 100%;
+    padding : 20px 20px 0 20px;
   }
   
 }
