@@ -4,60 +4,140 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
+	<script type="text/javascript" src="../JS/scroll.js"></script>
 	<title>just</title>
 
-	<link href="../just/reset.css" rel="stylesheet">
-	<link href="../just/index.css" rel="stylesheet">
+	<link href="../reset.css" rel="stylesheet">
+	<link href="../index.css" rel="stylesheet">
 </head>
 
 <body>
-	<main>
-		<div class="image">
-			fuck the police
+	<header>
+
+	</header>
+	<main id="main">
+		<div class ="arrowScroll">
+			<i class="fas fa-arrow-circle-up"></i>
+			<i class="fas fa-arrow-circle-down"></i>
 		</div>
-		<div class="about">
-			fuck the police
+		<div class ="darkmode">
+			<i class="fas fa-toggle-on"></i>
+			<i class="fas fa-toggle-off "></i>
 		</div>
-		<div class="ability">
-			fuck the police
+		<div class="main-div">
+			<div class ="intro">
+				<h2>>><strong>MOON</strong>GUNWHO<<</h2>				
+					<div class ="text-div">
+					<h3>PORTFOLIO</h3>
+					<span>안녕하세요. <br>웹 개발을 꿈꾸고 있는 <br>개발자 포트폴리오 사이트입니다. </span>
+				</div>
+				<div class ="icon-menu">
+					<i class="fas fa-arrow-right"></i>
+				</div>
+				<div class ="menu-list">
+					<ul>
+						<li id ="home-text">
+							HOME
+						</li>
+						<li id ="intro-text">
+							INTRO
+						</li>
+						<li id ="portfolio-text">
+							PORTFOLIO
+						</li>
+						<li id ="contactUs-text">
+						CONTACT US
+						</li>
+					</ul>
+				</div>		
+			</div>
 		</div>
 	</main>
 
-	<article class="contents1">
-		<div class="portfolio1">
-			포트폴리오1
+
+	<article id="intro" class ="contents1">
+		<div class="contents1-div">
+			<div class="image">
+
+			</div>
 		</div>
-		<div class="portfolio2">
-			포트폴리오2
+
+		<div class="contents1-div">
+			<div class="about">
+
+			</div>
+		</div>
+
+		<div class="contents1-div">
+			<div class="ability">
+
+			</div>
 		</div>
 	</article>
 
-	<footer>
-		<div class = "contact-div">
-		<div class="contact">
-			푸터푸터푸터
+	<article id="portfolio"class="contents2">
+		<div class="portfolio1">
+			<div class="port1">
+				1
+			</div>
+			<div class="port2">
+				2
+			</div>
 		</div>
-	</div>
+		<div class="portfolio2">
+			<div class="port3">
+				1
+			</div>
+			<div class="port4">
+				2
+			</div>
+		</div>
+	</article>
+
+	<footer id= "contactUs">
+		<div class="contact-div">
+			<div class="contact">
+				<div class="con">
+					<div class="con1">
+						zzzz
+					</div>
+
+					<div class="con2">
+						zzzzz
+					</div>
+				</div>
+				<div class="con3">
+					zzzzz
+				</div>
+			</div>
+		</div>
+		</div>
 		<div class="comment-div">
-			<div class="comment" id="lv-container" data-id="city" data-uid="MTAyMC81MjE2MS8yODY0MQ==">
-				<script type="text/javascript">
-					(function (d, s) {
-						var j, e = d.getElementsByTagName(s)[0];
+			<div class="comment">
+				<div id="lv-container" data-id="city" data-uid="MTAyMC81MjE2MS8yODY0MQ==">
+					<script type="text/javascript">
+						(function (d, s) {
+							var j, e = d.getElementsByTagName(s)[0];
 
-						if (typeof LivereTower === 'function') { return; }
+							if (typeof LivereTower === 'function') { return; }
 
-						j = d.createElement(s);
-						j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-						j.async = true;
+							j = d.createElement(s);
+							j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+							j.async = true;
 
-						e.parentNode.insertBefore(j, e);
-					})(document, 'script');
-				</script>
-				<noscript> 라이브리 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
+							e.parentNode.insertBefore(j, e);
+						})(document, 'script');
+					</script>
+					<noscript> 라이브리 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
+				</div>
 			</div>
 		</div>
 
 	</footer>
 </body>
+<script type="text/javascript" src="../JS/dark.js"></script>
+
 
 </html>

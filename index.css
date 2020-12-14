@@ -1,41 +1,253 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Mogra&display=swap');
 
+::-webkit-scrollbar-thumb {
+  background-color: #1b1c27;
+  border-radius: 20px;
+}
+body {
+  color: rgb(34, 34, 34);
+  font-family: 'Mogra', cursive;
+}
+.arrowScroll{
+  display : flex;
+  flex-direction: column;
+  position: fixed;
+  right: 20px;
+  bottom : 40px;
+}
+.arrowScroll i{
+  padding : 7px;
+  font-size : 40px;
+  color : rgb(255, 255, 255);
+  cursor: pointer;
+  z-index: 99;
+}
+
+header{
+  width : 100%;
+  height: 100%;
+  background-color: purple;
+}
+.fa-toggle-on{
+  display: none;
+}
+
+.fa-toggle-off{
+  color : black;
+}
+.toggleOn{
+  display: none;
+}
+.toggleOff{
+  display: inline;
+  color : white;
+}
 main{
+  width : 100%;
+  height : 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background : url(img/커트코베인3.jpg)bottom/cover;
+  transition: all 1s;
+  opacity: 0.9;
+}
+.darkmode{
+  font-size: 3.5em;
+  position: absolute;
+  right : 80px;
+  top : 20px;
+  z-index: 2;
+  cursor: pointer;
+}
+.darkmode i:hover{
+  transition: all 0.3s;
+  transform :scale(1.1);
+}
+.darkimg{
+  background :url(../img/커트코베인.jpg)top/cover;
+  
+}
+
+.darkmode i{
+  position: absolute;
+
+}
+main .main-div{
+  width : 90%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.intro{
+  position: absolute;
+  top: 80px;
+  left: 100px;
+  width: 40%;
+  height: calc(100% - 160px);
+  background: rgb(167, 192, 205,0.8);
+  transition: width 1s;
+  z-index: 1;
+  border-radius: 100px;
+}
+.backgroundwhite{
+  background-color: rgb(18, 57, 77, 0.8);
+  color : white;
+}
+.menu-list{
+  position: absolute;
+  top:0;
+  left : -100%;
+  width : 60%;
+  height: 100%;
+  background-color :rgb(255, 255, 255, 0.95);
+  z-index : -1;
+  transition: all 1s;
+  border-radius: 100px;
+}
+.menu-list ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.menu-list li{
+  padding : 20px;
+  font-size : 35px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.menu-list li:hover{
+  transform: scale(1.1) translate(0px, -5px);
+}
+.open {
+  left : 0;
+  background-color: #eceff1;
+  color : black;
+}
+.icon-menu i{
+  position: relative;
+  left : 60px;
+  top: 30px;
+  font-size : 40px;
+  cursor: pointer;
+  transition: all 0.5s;
+  z-index: 3;
+}
+.icon-click{
+  transform: scale(1.3) rotate( -180deg );
+  color : black;
+}
+
+.text-div{
+  position: absolute;
+  left : 30%;
+  top : -100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  animation: fadein-text 1.2s ease-in-out 0s forwards normal;
+  z-index: -1;
+}
+@keyframes fadein-text {
+  0% {opacity : 0;}
+  100% {position: absolute;  top: 300px; opacity: 1;}
+}
+@keyframes fadein-name {
+  0% {opacity : 0;}
+  100% {position: absolute;  left: 8%; opacity: 1;}
+}
+.intro h2 {
+  position: absolute;
+  left: -100%;
+  top : 120px;
+  letter-spacing: 5px;
+  animation: fadein-name 2s ease-out 0s forwards normal;
+  z-index: 2;
+  font-size : 20px;
+  z-index: -1;
+
+}
+.intro strong{
+  font-weight: bold;
+
+}
+.text-div h3{
+  font-size : 80px;
+  font-weight: bold;
+  padding-bottom: 100px;  
+}
+.text-div span{
+  font-family: 'Noto Sans KR';
+  font-size : 20px;  
+}
+
+.contents1{
   width : 100%;
   display: flex;
 }
-main .image{
-  width : calc(100%/3);
+.contents1-div{
+  width : 100%;
+  padding :20px;
+}
+.contents1-div .image{
+  width : 100%;
   height : 50vh;
   min-height: 300px;
-  background : url(../just/img/커트코베인.jpg);
-  background-size : 100% 100%;
+  background-color : orange;
   
 }
-main .about{
-  width : calc(100%/3);
+.contents1 .about{
+  width : 100%;
   height : 50vh;
   min-height: 300px;
   background-color :green;
 }
-main .ability{
-  width : calc(100%/3);
+.contents1 .ability{
+  width : 100%;
   height : 50vh;
   min-height: 300px;
   background-color :rgb(97, 121, 255);
 }
-.contents1{
+.contents2{
   display: flex;
   width : 100%;
-  height: 50vh;
-  min-height: 300px;
+  height : 65vh;
+  min-height: 450px;
 }
-.contents1 .portfolio1{
-  width : 50%;
+.contents2 .portfolio1{
+  width : 100%;
+  padding : 20px;
+  display : flex;
+}
+.portfolio1 .port1{
+  width: 50%;
+  height: 100%;
   background-color : red;
 }
-.contents1 .portfolio2{
-  width : 50%;
-  background-color : rgb(0, 4, 255);
+.portfolio1 .port2{
+  width: 50%;
+  height: 100%;
+  background-color : rgb(58, 199, 255);
+}
+.contents2 .portfolio2{
+  width : 100%;
+  padding : 20px;
+  display : flex;
+}
+.portfolio2 .port3{
+  width: 50%;
+  height: 100%;
+  background-color : rgb(174, 0, 255);
+}
+.portfolio2 .port4{
+  width: 50%;
+  height: 100%;
+  background-color : rgb(250, 248, 125);
 }
 footer {
   width : 100%;
@@ -44,41 +256,116 @@ footer {
 footer .contact-div{
   width : 50%;
   height: 400px;
-  background-color : peachpuff;
+  padding : 20px 20px 0 20px;
 }
 footer .contact{
-  width : 50%;
-  padding :0 20px;
-  margin-top : 20px;
+  width : 100%;
+  height: 100%;
+  background-color : peachpuff;
+  display: flex;
+  justify-content: space-around;
 }
-.comment-div{
+footer .con{
+  width : 65%;
+  height: 100%;
+  background-color : rgb(67, 243, 126);
+}
+footer .con .con1{
+  width : 100%;
+  height: 50%;
+  background-color: purple;
+}
+footer .con .con2{
+  width : 100%;
+  height: 50%;
+  background-color: rgb(223, 255, 78);
+}
+footer .con3{
+  width : 35%;
+  height: 100%;
+  background-color: rgb(255, 121, 121);
+}
+footer .comment-div{
   width : 50%;
   height: 400px;
-  background-color : lightblue;
+  padding : 20px 20px 0 20px;
 }
 footer .comment{
-  padding :0 20px;
-  margin-top : 20px;
+  width: 100%;
+  height: 100%;
   overflow-y : scroll; 
+  background-color : lightblue;
+}
+@media only screen 
+    and (max-width : 1500px)
+{
+  .intro{
+    width: 80%;
+    left: 100px;
+  }
 }
 
 @media only screen 
-    and (max-width : 800px)
+    and (max-width : 1000px)
 {
-  main {
+
+  .intro{
+    position: absolute;
+    top: 80px;
+    left: 50px;
+    width: 80%;
+    transition: all 0.5s;
+}
+  .text-div h3{
+    font-size : 9vw;
+    font-weight: bold;
+    padding-bottom: 100px;
+  }
+  .text-div span{
+    font-size : 16px;
+    line-height: 21px;
+  }
+  .contents1 {
     flex-direction: column;
     align-items: center;
   }
-  main .image, main .about, main .ability{
+  .contents1-div{
+    width : 90%;
+  }
+  .contents2{
+    min-height: 450px;
+  }
+  .contents2 .portfolio1{
     width : 100%;
+    padding : 20px 10px 20px 20px;
+    display : flex;
+    flex-direction: column;
+  }
+  .portfolio1 .port1, .portfolio1 .port2{
+    width: 100%;
+  }
+  .contents2 .portfolio2{
+    width : 100%;
+    padding : 20px 20px 20px 10px;
+    display : flex;
+    flex-direction: column;
+  }
+  .portfolio2 .port3, .portfolio2 .port4{
+    width: 100%;
   }
   footer {
     flex-direction: column;
+    align-items: center;
   }
   footer .contact-div{
-    width : 100%;
+    width : 90%;
+    height: 400px;
+    
   }
   footer .comment-div{
-    width : 100%;
+    width : 90%;
+    padding : 20px 20px 0 20px;   
+
   }
+  
 }
