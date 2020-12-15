@@ -1,31 +1,16 @@
 /* Font */
 @import url('https://fonts.googleapis.com/css2?family=Mogra&display=swap');
 
-::-webkit-scrollbar-thumb {
-  background-color: #1b1c27;
-  border-radius: 20px;
+html{
+  overflow-x: hidden;
 }
 body {
+  position: relative;
   height: 100%;
   color: rgb(34, 34, 34);
   font-family: 'Mogra', cursive;
+  z-index: -9999;
 }
-.arrowScroll{
-  display : flex;
-  flex-direction: column;
-  position: fixed;
-  right: 20px;
-  bottom : 40px;
-}
-.arrowScroll i{
-  padding : 7px;
-  font-size : 40px;
-  color : rgb(255, 255, 255);
-  cursor: pointer;
-  z-index: 99;
-  color :rgba(73, 191, 255, 0.8)
-}
-
 header{
   width : 100%;
   height: 100%;
@@ -80,65 +65,84 @@ main .main-div{
   width : 90%;
   height: 100vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
 }
 .main-contents{
-  position: absolute;
-  top: 80px;
-  left: 100px;
+  position: relative;
+  top: 30px;
+  left: 0;
   width: 40%;
   height: calc(100% - 160px);
   background: rgb(167, 192, 205,0.8);
   transition: width 1s;
-  z-index: 1;
+  z-index: 99;
   border-radius: 100px;
 }
 .backgroundwhite{
   background-color: rgb(18, 57, 77, 0.8);
   color : white;
 }
-.menu-list{
+.menu-div{
   position: absolute;
   top:0;
   left : -100%;
   width : 60%;
   height: 100%;
   background-color :rgb(255, 255, 255, 0.95);
-  z-index : -1;
-  transition: all 1s;
+  transition: all 0.7s;
   border-radius: 100px;
+  font-size : 35px;
+  z-index: 99;
 }
-.menu-list ul {
+.scrollMenu{
+  width : 8%;
+  height: 40%;
+  position: fixed;
+  top : 10%;
+  left : 0;
+  z-index: 999;
+  font-size : 28px;
+  text-align: center;
+  transition: all 0s;
+}
+.menuMotion{
+  
+}
+.menu-list {
+  position: relative;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 999;
 }
 .menu-list li{
+  position: relative;
   padding : 20px;
-  font-size : 35px;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.5s;
+  z-index: 999;
+  color : black;
+  text-align: center;
 }
 
-.menu-list li:hover{
+.menu-div li:hover{
   transform: scale(1.1) translate(0px, -5px);
 }
 .open {
   left : 0;
   background-color: #eceff1;
-  color : black;
 }
-.icon-menu i{
+.icon-arrow i{
   position: relative;
   left : 60px;
   top: 30px;
   font-size : 40px;
   cursor: pointer;
   transition: all 0.5s;
-  z-index: 3;
+  z-index: 999;
 }
 .icon-click{
   transform: scale(1.3) rotate( -180deg );
@@ -163,14 +167,13 @@ main .main-div{
   0% {opacity : 0;}
   100% {position: absolute;  left: 8%; opacity: 1;}
 }
-.main-contents h2 {
+.main-contents h1 {
   position: absolute;
   left: -100%;
   top : 120px;
   letter-spacing: 5px;
   animation: fadein-name 2s ease-out 0s forwards normal;
-  z-index: 2;
-  font-size : 20px;
+  font-size : 24px;
   z-index: -1;
 
 }
@@ -189,12 +192,17 @@ main .main-div{
 
 /* 인트로 시작 */
 .intro-contents{
-  width: 100%;
+  position: relative;
   height: 100vh;
+  z-index: -3;
 }
 .intro-div{
+  position: relative;
+  display: flex;
   width : 100%;
-  display : flex;
+  height: calc(100% - 150px);
+  min-height: 450px;
+  z-index: -2;
 }
 .intro-title{
   width: 100%;
@@ -203,28 +211,55 @@ main .main-div{
   line-height: 180px;
   font-size: 50px;
 }
-.contents-div{
+.contents-div1, .contents-div2, .contents-div3{
+  position: relative;
   width : 100%;
   height: 100%;
   padding :20px;
+  display: flex;
+  justify-content: center;
+  z-index: -1;
 }
-.contents-div .image{
+.conClick{
+  width : 80%;
+  position: absolute;
+  padding: 0 175px;
+  transition: all 0.5s;
+  z-index: 999;
+}
+.scrollHidden{
+  overflow: hidden;
+}
+.image:hover, .about:hover, .ability:hover{
+  transform: scale(1.03);
+}
+.contents-div1 .image{
+  position: relative;
   width : 100%;
   height : 80vh;
   min-height: 300px;
   background-color : orange;
+  cursor: pointer;
+  z-index: 4;
+  
 }
-.contents-div .about{
+.contents-div2 .about{
+  position: relative;
   width : 100%;
   height : 80vh;
   min-height: 300px;
   background-color :green;
+  cursor: pointer;
+  z-index: 4; 
 }
-.contents-div .ability{
+.contents-div3 .ability{
+  position: relative;
   width : 100%;
   height : 80vh;
   min-height: 300px;
   background-color :rgb(97, 121, 255);
+  cursor: pointer;
+  z-index: 4;
 }
 
 /* 포트폴리오 시작 */
@@ -342,6 +377,24 @@ footer .comment{
     width: 80%;
     left: 100px;
   }
+  .scrollMenu{
+    font-size: 18px;
+    transition: all 0s;
+  }
+  .contents-div1, .contents-div2, .contents-div3{
+    padding : 0px;
+    justify-content: center;
+  }
+  .contents-div1 .image , .contents-div2 .about, .contents-div3 .ability{
+    padding : 0px;
+    margin : 0 20px;
+  }
+  .conClick{
+    width : 100%;
+    position: absolute;
+    padding : 0px 0;
+    transition: all 0.5s;
+  }
 }
 @media only screen 
     and (max-width : 1300px)
@@ -357,6 +410,26 @@ footer .comment{
   .intro-div {
     flex-direction: column;
     align-items: center;
+  }
+  .contents-div1, .contents-div2, .contents-div3{
+    padding : 10px 0;
+  }
+  .contents-div1 .image , .contents-div2 .about, .contents-div3 .ability{
+    padding : 0px;
+    margin : 20px;
+    cursor: default; 
+  }
+  .image:hover, .about:hover, .ability:hover{
+    transform: scale(1);
+  }
+  .conClick{
+    width : 100%;
+    position: static;
+    padding : 10px 0px;
+    transition: all 1s;
+  }
+  .scrollHidden{
+    overflow-y : visible;
   }
   .portfolio1 .port1{
     width: 100%;
@@ -378,15 +451,14 @@ footer .comment{
     height: 100%;
     background-color : rgb(250, 248, 125);
   }
-  
 }
+  
 @media only screen 
     and (max-width : 1000px)
 {
   .main-contents{
-    position: absolute;
-    top: 80px;
-    left: 50px;
+    top: 30px;
+    left: 40px;
     width: 80%;
     transition: all 0.5s;
 }
@@ -399,14 +471,25 @@ footer .comment{
     font-size : 16px;
     line-height: 21px;
   }
+  .scrollMenu{
+    width : 100%;
+    height: 50px;
+    position: fixed;
+    top : 0%;
+    left : 0;
+    z-index: 999;
+    font-size : 20px;
+    text-align: center;
+    transition: all 0s;
+  }
+  .rowList{
+    display : flex;
+    flex-direction: row;
+  }
   /* 인트로 시작 */
   .intro-contents{
     width: 100%;
     height: 100%;
-  }
-  
-  .contents-div{
-    width : 90%;
   }
   /* 포트폴리오 시작 */
   .portfolio-div{
