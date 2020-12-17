@@ -35,7 +35,7 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
-  background : url(/img/커트코베인3.jpg)bottom/cover;
+  background : url(../img/커트코베인3.jpg)bottom/cover;
   transition: all 1s;
   opacity: 0.9;
 }
@@ -52,7 +52,7 @@ main{
   transform :scale(1.1);
 }
 .darkimg{
-  background :url(/img/커트코베인.jpg)top/cover;
+  background :url(../img/커트코베인.jpg)top/cover;
   
 }
 
