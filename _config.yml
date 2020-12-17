@@ -5,5 +5,5 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "moongunwho"
 description              : "An amazing website."
-url                      :"https://who307.github.io".
+url                      :"https://who307.github.io/".
 repository               : who307/portfolio
