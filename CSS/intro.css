@@ -1,0 +1,72 @@
+/* 인트로 시작 */
+.intro-contents{
+  position: relative;
+  height: 100vh;
+  z-index: -3;
+}
+.intro-div{
+  position: relative;
+  display: flex;
+  width : 100%;
+  height: calc(100% - 150px);
+  min-height: 450px;
+  z-index: -2;
+}
+.intro-title{
+  width: 100%;
+  height : 150px;
+  text-align: center;
+  line-height: 180px;
+  font-size: 50px;
+}
+.contents-div1, .contents-div2, .contents-div3{
+  position: relative;
+  width : 100%;
+  height: 100%;
+  padding :20px;
+  display: flex;
+  justify-content: center;
+  z-index: -1;
+}
+.conClick{
+  width : 80%;
+  position: absolute;
+  padding: 0 175px;
+  transition: all 0.8s;
+  z-index: 999;
+}
+.scrollHidden{
+  overflow: hidden;
+}
+.image:hover, .about:hover, .ability:hover{
+  transform: scale(1.02);
+  transition: all 0.5s;
+}
+.contents-div1 .image{
+  position: relative;
+  width : 100%;
+  height : 80vh;
+  min-height: 300px;
+  background-color : orange;
+  cursor: pointer;
+  z-index: 4;
+  
+}
+.contents-div2 .about{
+  position: relative;
+  width : 100%;
+  height : 80vh;
+  min-height: 300px;
+  background-color :green;
+  cursor: pointer;
+  z-index: 4; 
+}
+.contents-div3 .ability{
+  position: relative;
+  width : 100%;
+  height : 80vh;
+  min-height: 300px;
+  background-color :rgb(97, 121, 255);
+  cursor: pointer;
+  z-index: 4;
+}

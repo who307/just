@@ -1,0 +1,47 @@
+/* 포트폴리오 시작 */
+.portfolio-contents{
+  height: 100vh;
+}
+.portfolio-div{
+  display: flex;
+  width : 100%;
+  height: calc(100% - 150px);
+  min-height: 450px;
+}
+.portfolio-title{
+  width: 100%;
+  height : 150px;
+  text-align: center;
+  line-height: 170px;
+  font-size: 50px;
+}
+.portfolio-div .portfolio1{
+  width : 100%;
+  padding : 20px;
+  display : flex;
+}
+.portfolio1 .port1{
+  width: 50%;
+  height: 100%;
+  background-color : red;
+}
+.portfolio1 .port2{
+  width: 50%;
+  height: 100%;
+  background-color : rgb(58, 199, 255);
+}
+.portfolio-div .portfolio2{
+  width : 100%;
+  padding : 20px;
+  display : flex;
+}
+.portfolio2 .port3{
+  width: 50%;
+  height: 100%;
+  background-color : rgb(174, 0, 255);
+}
+.portfolio2 .port4{
+  width: 50%;
+  height: 100%;
+  background-color : rgb(250, 248, 125);
+}

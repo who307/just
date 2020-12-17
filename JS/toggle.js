@@ -1,11 +1,11 @@
 'use strict';
 
-let darkmode = document.querySelector(".darkmode");
-let mainCon = document.querySelector(".main-contents")
-let on = document.querySelector(".fa-toggle-on");
-let off = document.querySelector(".fa-toggle-off");
-let body = document.querySelector("body")
-let main = document.querySelector("main")
+const darkmode = document.querySelector(".darkmode");
+const mainCon = document.querySelector(".main-contents")
+const on = document.querySelector(".fa-toggle-on");
+const off = document.querySelector(".fa-toggle-off");
+const body = document.querySelector("body")
+const main = document.querySelector("main")
 
 function toggleModal() {
   on.classList.toggle("toggleOff");
@@ -15,8 +15,8 @@ function toggleModal() {
 }
 darkmode.addEventListener("click", toggleModal);
 
-let icon = document.querySelector(".fa-arrow-right");
-let menuDiv = document.querySelector(".menu-div");
+const icon = document.querySelector(".fa-arrow-right");
+const menuDiv = document.querySelector(".menu-div");
 
 function iconMenu() {
   icon.classList.toggle("icon-click");
@@ -24,21 +24,21 @@ function iconMenu() {
 }
 icon.addEventListener("click", iconMenu);
 
-let conDiv1 = document.querySelector(".contents-div1");
-let conDiv2 = document.querySelector(".contents-div2");
-let conDiv3 = document.querySelector(".contents-div3");
-let _html = document.querySelector("html");
+const conDiv1 = document.querySelector(".contents-div1");
+const conDiv2 = document.querySelector(".contents-div2");
+const conDiv3 = document.querySelector(".contents-div3");
+const _html = document.querySelector("html");
 function contentsClick1() {
   conDiv1.classList.toggle("conClick");
-  _html.classList.toggle("scrollHidden");
+  // _html.classList.toggle("scrollHidden");
 }
 function contentsClick2() {
   conDiv2.classList.toggle("conClick");
-  _html.classList.toggle("scrollHidden");
+  // _html.classList.toggle("scrollHidden");
 }
 function contentsClick3() {
   conDiv3.classList.toggle("conClick");
-  _html.classList.toggle("scrollHidden");
+  // _html.classList.toggle("scrollHidden");
 }
 
 conDiv1.addEventListener("click", contentsClick1);

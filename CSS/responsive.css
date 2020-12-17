@@ -1,0 +1,169 @@
+/* 미디어쿼리 시작 */
+@media only screen 
+    and (max-width : 1500px)
+{
+  
+  .main-contents{
+    width: 80%;
+    left: 100px;
+  }
+  .scrollMenu{
+    font-size: 18px;
+    transition: all 0s;
+  }
+  .contents-div1, .contents-div2, .contents-div3{
+    padding : 0px;
+    justify-content: center;
+  }
+  .contents-div1 .image , .contents-div2 .about, .contents-div3 .ability{
+    padding : 0px;
+    margin : 0 20px;
+  }
+  .conClick{
+    width : 100%;
+    position: absolute;
+    padding : 0px 0;
+    transition: all 0.5s;
+  }
+}
+@media only screen 
+    and (max-width : 1300px)
+{
+  .contents-div{
+    width : 80%;
+    padding :20px;
+  }
+  .intro-contents{
+    width: 100%;
+    height: 100%;
+  }
+  .intro-div {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contents-div1, .contents-div2, .contents-div3{
+    padding : 10px 0;
+  }
+  .contents-div1 .image , .contents-div2 .about, .contents-div3 .ability{
+    padding : 0px;
+    margin : 20px;
+    cursor: default; 
+  }
+  .image:hover, .about:hover, .ability:hover{
+    transform: scale(1);
+  }
+  .conClick{
+    width : 100%;
+    position: static;
+    padding : 10px 0px;
+    transition: all 1s;
+  }
+  .scrollHidden{
+    overflow-y : visible;
+  }
+  .portfolio1 .port1{
+    width: 100%;
+    height: 100%;
+    background-color : red;
+  }
+  .portfolio1 .port2{
+    width: 100%;
+    height: 100%;
+    background-color : rgb(58, 199, 255);
+  }
+  .portfolio2 .port3{
+    width: 100%;
+    height: 100%;
+    background-color : rgb(174, 0, 255);
+  }
+  .portfolio2 .port4{
+    width: 100%;
+    height: 100%;
+    background-color : rgb(250, 248, 125);
+  }
+}
+  
+@media only screen 
+    and (max-width : 1000px)
+{
+  .main-contents{
+    top: 30px;
+    left: 40px;
+    width: 80%;
+    transition: all 0.5s;
+}
+  .main-text h3{
+    font-size : 9vw;
+    font-weight: bold;
+    padding-bottom: 100px;
+  }
+  .main-text span{
+    font-size : 16px;
+    line-height: 21px;
+  }
+  .scrollMenu{
+    width : 100%;
+    height: 50px;
+    position: fixed;
+    top : 0%;
+    left : 0;
+    z-index: 999;
+    font-size : 20px;
+    text-align: center;
+    transition: all 0s;
+  }
+  .rowList{
+    display : flex;
+    flex-direction: row;
+  }
+  /* 인트로 시작 */
+  .intro-contents{
+    width: 100%;
+    height: 100%;
+  }
+  /* 포트폴리오 시작 */
+  .portfolio-div{
+    min-height: 450px;
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .portfolio-div .portfolio1{
+    width : 90%;
+    height: 100%;
+    padding : 10px 0px 10px 0px;
+    display : flex;
+    flex-direction: column;
+  }
+  .portfolio1 .port1, .portfolio1 .port2{
+    width: 100%;
+    height: 100%;
+  }
+  .portfolio-div .portfolio2{
+    width : 90%;
+    height: 100%;
+    padding : 10px 0px 10px 0px;
+    display : flex;
+    flex-direction: column;
+  }
+  .portfolio2 .port3, .portfolio2 .port4{
+    width: 100%;
+    height: 100%;
+
+  }
+  /* 푸터 시작 */
+  .contactUs-contents{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .contactUs-div{
+    width : 90%;
+  }
+  footer .comment-div{
+    width : 90%;
+    height: 100%;
+    padding : 20px 20px 0 20px;
+  }
+  
+}

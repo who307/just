@@ -1,0 +1,214 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Mogra&display=swap');
+
+html{
+  overflow-x: hidden;
+}
+body {
+  position: relative;
+  height: 100%;
+  color: rgb(34, 34, 34);
+  font-family: 'Mogra', cursive;
+  z-index: -9999;
+}
+header{
+  width : 100%;
+  height: 100%;
+  background-color: purple;
+}
+.fa-toggle-on{
+  display: none;
+}
+.fa-toggle-off{
+  color : black;
+}
+.toggleOn{
+  display: none;
+}
+.toggleOff{
+  display: inline;
+  color : white;
+}
+main{
+  width : 100%;
+  height : 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background : url(../img/커트코베인3.jpg)bottom/cover;
+  transition: all 1s;
+  opacity: 0.9;
+}
+.darkmode{
+  font-size: 3.5em;
+  position: absolute;
+  right : 80px;
+  top : 20px;
+  z-index: 2;
+  cursor: pointer;
+}
+.darkmode i:hover{
+  transition: all 0.3s;
+  transform :scale(1.1);
+}
+.darkimg{
+  background :url(../img/커트코베인.jpg)top/cover;
+  
+}
+
+.darkmode i{
+  position: absolute;
+
+}
+main .main-div{
+  width : 90%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.main-contents{
+  position: relative;
+  top: 30px;
+  left: 0;
+  width: 40%;
+  height: calc(100% - 160px);
+  background: rgb(167, 192, 205,0.8);
+  transition: width 1s;
+  z-index: 99;
+  border-radius: 100px;
+}
+.backgroundwhite{
+  background-color: rgb(18, 57, 77, 0.8);
+  color : white;
+}
+.menu-div{
+  position: absolute;
+  top:0;
+  left : -100%;
+  width : 60%;
+  height: 100%;
+  background-color :rgb(255, 255, 255, 0.95);
+  transition: all 0.7s;
+  border-radius: 100px;
+  font-size : 35px;
+  z-index: 99;
+  opacity: 0;
+}
+.open {
+  left : 0;
+  background-color: #eceff1;
+  opacity: 1;
+}
+.scrollMenu{
+  width : 8%;
+  height: 40%;
+  position: fixed;
+  top : 0%;
+  left : 0;
+  z-index: 999;
+  font-size : 26px;
+  text-align: center;
+  transition: all 0s;
+  opacity: 1;
+  border-radius : 0 0 100px 100px;
+  
+}
+.menu-list {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.menu-list li{
+  position: relative;
+  padding : 20px;
+  cursor: pointer;
+  transition: all 0.5s;
+  z-index: 999;
+  color : black;
+  text-align: center;
+}
+.menu-list li span::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  transition: width 0.5s;
+}
+.menu-list li:hover span::after {
+  width: 75%;
+}
+
+.menu-list li:hover{
+  animation: menuMotion 0.4s ease infinite alternate;
+}
+@keyframes menuMotion{
+  0% {transform : scale(1.0)}
+  100% {transform : scale(1.1) translate(0px, -5px)}
+}
+.open {
+  left : 0;
+  background-color: #eceff1;
+}
+.icon-arrow i{
+  position: relative;
+  left : 60px;
+  top: 30px;
+  font-size : 40px;
+  cursor: pointer;
+  transition: all 0.5s;
+  z-index: 999;
+}
+.icon-click{
+  transform: scale(1.3) rotate( -180deg );
+  color : black;
+}
+
+.main-text{
+  position: absolute;
+  left : 30%;
+  top : -100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  animation: fadein-text 1.2s ease-in-out 0s forwards normal;
+  z-index: -1;
+}
+@keyframes fadein-text {
+  0% {opacity : 0;}
+  100% {position: absolute;  top: 300px; opacity: 1;}
+}
+@keyframes fadein-name {
+  0% {opacity : 0;}
+  100% {position: absolute;  left: 8%; opacity: 1;}
+}
+.main-contents h1 {
+  position: absolute;
+  left: -100%;
+  top : 120px;
+  letter-spacing: 5px;
+  animation: fadein-name 2s ease-out 0s forwards normal;
+  font-size : 24px;
+  z-index: -1;
+
+}
+.main-contents strong{
+  font-weight: bold;
+}
+.main-text h3{
+  font-size : 80px;
+  font-weight: bold;
+  padding-bottom: 100px;  
+}
+.main-text span{
+  font-family: 'Noto Sans KR';
+  font-size : 20px;  
+}
