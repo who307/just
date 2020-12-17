@@ -1,0 +1,10 @@
+# Site Settings
+locale                   : "ko-korea"
+title                    : "portfolio"
+title_separator          : "-"
+subtitle                 : # site tagline that appears below site title in masthead
+name                     : "moongunwho"
+description              : "An amazing website."
+url                      :"https://who307.github.io"
+baseurl                  : # the subpath of your site, e.g. "/blog"
+repository               : who307/just
