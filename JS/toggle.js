@@ -1,19 +1,22 @@
 'use strict';
 
-const darkmode = document.querySelector(".darkmode");
+const darkmode = document.querySelector(".darkmodeBtn");
 const mainCon = document.querySelector(".main-contents")
 const on = document.querySelector(".fa-toggle-on");
 const off = document.querySelector(".fa-toggle-off");
-const body = document.querySelector("body")
-const main = document.querySelector("main")
+const _body = document.querySelector("body")
+const _main = document.querySelector("main")
 
-function toggleModal() {
+
+
+function Dark() {
   on.classList.toggle("toggleOff");
   off.classList.toggle("toggleOn");
-  main.classList.toggle("darkimg");
-  mainCon.classList.toggle("backgroundwhite");
+  _main.classList.toggle("darkimg");
+  mainCon.classList.toggle("changeColor");
+  // _body.classList.toggle("changeBlack")
 }
-darkmode.addEventListener("click", toggleModal);
+darkmode.addEventListener("click", Dark);
 
 const icon = document.querySelector(".fa-arrow-right");
 const menuDiv = document.querySelector(".menu-div");

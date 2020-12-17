@@ -10,6 +10,7 @@ body {
   color: rgb(34, 34, 34);
   font-family: 'Mogra', cursive;
   z-index: -9999;
+  background-color: rgb(207, 214, 253);
 }
 header{
   width : 100%;
@@ -35,11 +36,12 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
-  background : url(../img/커트코베인3.jpg)bottom/cover;
+  /* background : url(../img/커트코베인3.jpg)bottom/cover; */
+  background : rgb(217, 238, 216);
   transition: all 1s;
   opacity: 0.9;
 }
-.darkmode{
+.darkmodeBtn{
   font-size: 3.5em;
   position: absolute;
   right : 80px;
@@ -47,18 +49,29 @@ main{
   z-index: 2;
   cursor: pointer;
 }
-.darkmode i:hover{
+.darkmodeBtn i:hover{
   transition: all 0.3s;
   transform :scale(1.1);
 }
 .darkimg{
-  background :url(../img/커트코베인.jpg)top/cover;
-  
+  background : #041024;
 }
 
-.darkmode i{
+.darkmodeBtn i{
   position: absolute;
-
+}
+/* toggle.js 각 구역 타이틀 컬러 변경 */
+.changeWhite{
+  color : rgb(255, 255, 255);
+}
+/* body 배경색 변경 */
+.changeBlack{
+  background-color: #041024;
+}
+/* 메인 콘텐츠 배경색 글자색변경 */
+.changeColor{
+  background-color: rgb(18, 57, 77, 0.8);
+  color : white;
 }
 main .main-div{
   width : 90%;
@@ -77,10 +90,6 @@ main .main-div{
   transition: all 0.8s;
   z-index: 99;
   border-radius: 100px;
-}
-.backgroundwhite{
-  background-color: rgb(18, 57, 77, 0.8);
-  color : white;
 }
 .menu-div{
   position: absolute;
