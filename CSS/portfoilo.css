@@ -23,12 +23,12 @@
 .portfolio1 .port1{
   width: 50%;
   height: 100%;
-  background-color : red;
+  background-color : rgb(255, 189, 189);
 }
 .portfolio1 .port2{
   width: 50%;
   height: 100%;
-  background-color : rgb(58, 199, 255);
+  background-color : rgb(164, 229, 255);
 }
 .portfolio-div .portfolio2{
   width : 100%;
@@ -38,10 +38,10 @@
 .portfolio2 .port3{
   width: 50%;
   height: 100%;
-  background-color : rgb(174, 0, 255);
+  background-color : rgb(239, 204, 255);
 }
 .portfolio2 .port4{
   width: 50%;
   height: 100%;
-  background-color : rgb(250, 248, 125);
+  background-color : rgb(255, 255, 227);
 }
