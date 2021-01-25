@@ -8,4 +8,4 @@ name                     : "moongunwho"
 description              : "An amazing website."
 url                      : "https://who307.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : who307/just
+repository               : who307/responsiveWep
