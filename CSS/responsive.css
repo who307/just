@@ -11,20 +11,6 @@
     font-size: 18px;
     transition: all 0s;
   }
-  .contents-div1, .contents-div2, .contents-div3{
-    padding : 0px;
-    justify-content: center;
-  }
-  .contents-div1 .image , .contents-div2 .about, .contents-div3 .ability{
-    padding : 0px;
-    margin : 0 20px;
-  }
-  .conClick{
-    width : 100%;
-    position: absolute;
-    padding : 0px 0;
-    transition: all 0.5s;
-  }
 }
 @media only screen 
     and (max-width : 1300px)
@@ -44,7 +30,8 @@
   .contents-div1, .contents-div2, .contents-div3{
     padding : 10px 0;
   }
-  .contents-div1 .image , .contents-div2 .about, .contents-div3 .ability{
+  .contents-div1 .about , .contents-div2 .ability, .contents-div3 .image{
+    width : 90%;
     padding : 0px;
     margin : 20px;
     cursor: default; 
@@ -125,6 +112,7 @@
     width: 100%;
     height: 100%;
   }
+
   /* 포트폴리오 시작 */
   .portfolio-div{
     min-height: 450px;
@@ -156,23 +144,22 @@
 
   }
   /* 푸터 시작 */
-  .contactUs-contents{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
   footer .contactUs-div{
     width : 90%;
   }
-  footer .comment-div{
-    width : 90%;
-    height: 100%;
-    padding : 20px 20px 0 20px;
+  footer .contactUs-contents{
+    flex-direction: column;
+    align-items: center;
   }
-  
+  footer .comment-div{
+    height: 50%;
+  }
 }
 @media only screen and (max-width: 600px){
   .scrollMenu{
     font-size: 18px;
+  }
+  .main-text {
+    left : 5%;
   }
 }

@@ -5,7 +5,7 @@ window.addEventListener('load', function () {
   // 메인화면
   document.querySelector('#home-text').addEventListener('click', function (e) {
     e.preventDefault();
-    document.querySelector('header').scrollIntoView({ behavior: 'smooth' });
+    document.querySelector('main').scrollIntoView({ behavior: 'smooth' });
   });
 // 인트로화면
   document.querySelector('#intro-text').addEventListener('click', function (e) {

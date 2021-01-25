@@ -12,7 +12,6 @@ function Dark() {
   off.classList.toggle("toggleOn");
   _main.classList.toggle("darkimg");
   mainCon.classList.toggle("changeColor");
-  // _body.classList.toggle("changeBlack")
 }
 darkmode.addEventListener("click", Dark);
 
@@ -30,13 +29,10 @@ const conDiv2 = document.querySelector(".contents-div2");
 const conDiv3 = document.querySelector(".contents-div3");
 const _html = document.querySelector("html");
 
-
-
 let toggleEnd = false;
 
 document.addEventListener("scroll", function () {
   let _scrollwidth = document.documentElement.scrollWidth;
-  console.log(_scrollwidth);
   if(_scrollwidth > 1285){
       return toggleEnd = true;
   }
