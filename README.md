@@ -1,4 +1,4 @@
-## ResponsiveWep https://who307.github.io/responsiveWep/
+## ResponsiveWep https://who307.github.io/responsiveWeb/
 ## 2020-12-16
 1. CSS 분할
 
