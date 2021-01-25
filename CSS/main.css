@@ -25,7 +25,7 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
-  background : no-repeat bottom url(../img/main.jpg);
+  background : no-repeat center url(../img/main.jpg);
   transition: all 1s;
   opacity: 0.9;
 }
