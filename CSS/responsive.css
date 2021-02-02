@@ -158,6 +158,7 @@
 @media only screen and (max-width: 600px){
   .scrollMenu{
     font-size: 18px;
+    border-radius : 0;
   }
   .main-text {
     left : 5%;
